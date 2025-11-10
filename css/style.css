@@ -1,0 +1,47 @@
+.nav-link {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1d4ed8;
+}
+
+.nav-link.active {
+  color: #1d4ed8;
+  font-weight: bold;
+}
+.top {
+  border: 1px solid #000;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 100%;
+  transition: all .5s;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #fff;
+  cursor: pointer;
+  color: black;
+}
+.top:hover {
+  transform: rotate(360deg) scale(1.1);
+  }
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PI</title>
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="img/pi.jpg" type="image/jpg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      overflow: hidden;
+    }
+
+    #intro {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to right, #000, #2e026d, #6b21a8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .intro span {
+      opacity: 0;
+      font-size: 3rem;
+      font-weight: bold;
+      display: inline-block;
+      animation: fadeInTranslate 1s ease forwards;
+      color: white;
+    }
+
+    .intro span:nth-child(1) { animation-delay: 0s; }
+    .intro span:nth-child(2) { animation-delay: 1s; }
+    .intro span:nth-child(3) { animation-delay: 2s; }
+    .intro span:nth-child(4) { animation-delay: 3s; }
+    .intro span:nth-child(5) { animation-delay: 4s; }
+    .intro span:nth-child(6) { animation-delay: 5s; }
+
+    @keyframes fadeInTranslate {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-black via-indigo-900 to-purple-900 text-white">
+  <div id="intro">
+    <div class="intro text-center">
+      <span>From&nbsp;</span>
+      <span>Youth&nbsp;</span>
+      <span>Resources&nbsp;</span>
+      <span>to&nbsp;</span>
+      <span>National&nbsp;</span>
+      <span>Prosperity&nbsp;</span>
+    </div>
+  </div>
+
+  <div id="main" class="hidden">
+    <header class="mx-auto mt-8 w-[95%] max-w-6xl z-50">
+      <div class="bg-white text-black rounded-full px-6 py-3 flex justify-between items-center shadow-lg">
+        <div class="flex items-center space-x-2">
+          <img src="img/pi.jpg" alt="Logo" class="w-9 h-9 object-contain" />
+        </div>
+        <nav class="hidden md:flex space-x-6 font-semibold text-sm">
+          <a href="index.html" class="nav-link active">HOME</a>
+          <a href="about.html" class="nav-link">ABOUT US</a>
+          <a href="program.html" class="nav-link">EXPLORE</a>
+          <a href="department.html" class="nav-link">DEPARTMENT</a>
+          <a href="join.html" class="nav-link">DEPARTMENT</a>
+          <a href="contact.html" class="nav-link">CONTACT US</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-black focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden mt-2 bg-white rounded-xl text-black px-6 py-4 text-sm font-semibold shadow-md">
+        <a href="index.html" class="block py-2 text-blue-700">HOME</a>
+        <a href="about.html" class="block py-2">ABOUT US</a>
+        <a href="program.html" class="block py-2">EXPLORE</a>
+        <a href="department.html" class="block py-2">DEPARTMENT</a>
+        <a href="join.html" class="block py-2">DEPARTMENT</a>
+        <a href="contact.html" class="block py-2">CONTACT US</a>
+      </div>
+    </header>
+    <main class="pt-28 px-4 flex flex-col gap-10 items-center">
+      <section class="bg-white text-black rounded-2xl shadow-lg max-w-4xl p-6 flex flex-col md:flex-row justify-between items-center gap-4 transform transition-transform duration-300 hover:-translate-y-1">
+        <div class="md:w-1/2 text-left">
+          <h2 class="text-xl font-bold text-blue-700">Empowering Myanmar’s <br> Youth Community</h2>
+          <p class="mt-2 text-sm">Prime Icon (PI) is a youth-led organization based in Myanmar, dedicated to empowering young people through education, skill development, and social action. We believe that when youth are equipped with the right resources and support, they become powerful catalysts for national transformation.
+</p>
+          <button id="joinBtn" class="mt-4 px-5 py-2 border border-blue-700 text-blue-700 rounded-full hover:bg-blue-700 hover:text-white transition">Join With Us</button>
+        </div>
+        <div class="md:w-1/2">
+          <img src="img/1.jpg" alt="Empowering Image" class="w-full max-w-xs mx-auto" />
+        </div>
+      </section>
+
+      <section class="bg-white text-black rounded-2xl shadow-lg max-w-4xl p-6 flex flex-col md:flex-row-reverse justify-between items-center gap-4 transform transition-transform duration-300 hover:-translate-y-1">
+        <div class="md:w-1/2 text-left">
+          <h3 class="text-sm font-bold text-pink-600 uppercase">CONNECT and COMMUNICATE</h3>
+          <h2 class="text-xl font-bold text-pink-700 mt-1">Expand your Network and Communicate</h2>
+          <p class="mt-2 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo excepturi quibusdam sit maiores quis vitae.</p>
+          <button id="joinBtn1" class="mt-4 px-5 py-2 border border-pink-700 text-pink-700 rounded-full hover:bg-pink-700 hover:text-white transition">View Program</button>
+        </div>
+        <div class="md:w-1/2">
+          <img src="img/Connect.jpg" alt="Connect Image" class="w-full max-w-xs mx-auto" />
+        </div>
+      </section>
+      <section class="bg-gradient-to-r from-indigo-900 via-purple-900 to-black rounded-2xl shadow-lg max-w-4xl p-6 text-center text-white relative overflow-hidden">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+          <img src="img/ANT 02.png" alt="Left Character" class="w-20 md:w-24" />
+          <div class="flex-1">
+            <h2 class="text-xl font-bold">About <span class="text-blue-400">YRA</span></h2>
+            <p class="mt-2 text-sm px-2 md:px-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo excepturi quibusdam sit maiores quis vitae.</p>
+            <button id="joinBtn2" class="mt-4 px-5 py-2 border border-white text-white rounded-full hover:bg-blue-700 hover:text-white transition">About Us</button>
+          </div>
+          <img src="img/ANT 01.png" alt="Right Character" class="w-20 md:w-24 hidden md:block" />
+        </div>
+      </section>
+      <section class="text-center text-white">
+  <h2 class="text-2xl font-bold mb-6">Our <span class="text-blue-400">Value</span></h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+    <div class="bg-white text-black rounded-2xl shadow-md p-6">
+      <img src="img/leadership.jpg" alt="Leadership Icon" class="w-28 h-28 mx-auto mb-4">
+      <h3 class="text-lg font-bold text-blue-700">Youth Centered Leadership</h3>
+      <p class="mt-2 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo excepturi quibusdam sit maiores quis vitae, quia consequuntur, earum inventore id, animi adipisci omnis.</p>
+    </div>
+
+    <div class="bg-white text-black rounded-2xl shadow-md p-6">
+      <img src="img/diversity.jpg" alt="Diversity Icon" class="w-28 h-28 mx-auto mb-4">
+      <h3 class="text-lg font-bold text-blue-700">Diversity and Inclusion</h3>
+      <p class="mt-2 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo excepturi quibusdam sit maiores quis vitae, quia consequuntur, earum inventore id, animi adipisci omnis.</p>
+    </div>
+
+    <div class="bg-white text-black rounded-2xl shadow-md p-6">
+      <img src="img/innivation.jpg" alt="Innovation & Flexibility Icon" class="w-20 h-20 mx-auto mb-4">
+      <h3 class="text-lg font-bold text-blue-700">Innovation & Flexibility</h3>
+      <p class="mt-2 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo excepturi quibusdam sit maiores quis vitae, quia consequuntur, earum inventore id, animi adipisci omnis.</p>
+    </div>
+    
+    <div class="bg-white text-black rounded-2xl shadow-md p-6">
+      <img src="img/account.jpg" alt="Account Icon" class="w-24 h-24 mx-auto mb-4">
+      <h3 class="text-lg font-bold text-blue-700">Transparency and Accountability</h3>
+      <p class="mt-2 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo excepturi quibusdam sit maiores quis vitae, quia consequuntur, earum inventore id, animi adipisci omnis.</p>
+    </div>
+  </div>
+  <a href="#top" class="top" aria-label="Scroll to top">&uarr;</a>
+</section>
+
+<section class=" py-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-center text-3xl font-bold text-white mb-8">
+      Our <span class="text-blue-400">Partners</span>
+    </h2>
+    <div class="border-2 border-purple-500 rounded-lg p-6">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6 place-items-center">
+        <img src="../partner1.png" alt="Partner 1" class="w-20 h-20 object-contain" />
+        <img src="../partner2.png" alt="Partner 2" class="w-20 h-20 object-contain" />
+        <img src="../partner3.png" alt="Partner 3" class="w-20 h-20 object-contain" />
+        <img src="../partner4.png" alt="Partner 4" class="w-20 h-20 object-contain" />
+        <img src="../partner5.png" alt="Partner 5" class="w-20 h-20 object-contain" />
+        <img src="../partner6.png" alt="Partner 6" class="w-20 h-20 object-contain" />
+      </div>
+    </div>
+</section>
+</main>
+  </div>
+<div class="mt-20"></div>
+<footer class="w-full bg-white rounded-t-3xl shadow-inner pt-12 pb-8 px-6 md:px-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-black">
+    <div>
+      <h3 class="text-xl font-semibold text-blue-700 mb-4">PI</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-blue-500 transition">About</a></li>
+        <li><a href="event.html" class="hover:text-blue-500 transition">Event</a></li>
+        <li><a href="program.html" class="hover:text-blue-500 transition">Program</a></li>
+        <li><a href="support.html" class="hover:text-blue-500 transition">Support Us</a></li>
+        <li><a href="contact.html" class="hover:text-blue-500 transition">Join Us</a></li>
+        <li><a href="faq.html" class="hover:text-blue-500 transition">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold text-blue-700 mb-4">Contact Us</h3>
+      <p class="text-sm"><a href="mailto:PrimeIcon.org" class="hover:text-blue-500 transition">PrimeIcon.org</a></p>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold text-blue-700 mb-4">Social Media</h3>
+      <div class="flex space-x-4">
+        <a href="https://www.facebook.com/PrimeIcon" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" class="w-6 h-6 hover:opacity-80 transition" />
+        </a>
+        <a href="https://www.linkedin.com/in/pi" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-6 h-6 hover:opacity-80 transition" />
+        </a>
+        <a href="https://t.me/piofficial" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="w-6 h-6 hover:opacity-80 transition" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="mt-10 text-center text-xs text-gray-500">
+    © 2025 PI. All rights reserved.
+  </div>
+</footer>
+  <script>
+    setTimeout(() => {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("main").classList.remove("hidden");
+      document.body.style.overflow = "auto";
+    }, 4000);
+
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    [
+      { id: 'joinBtn', url: 'department.html' },
+      { id: 'joinBtn1', url: 'program.html' },
+      { id: 'joinBtn2', url: 'about.html' }
+    ].forEach(btn => {
+      const el = document.getElementById(btn.id);
+      if (el) el.addEventListener('click', () => window.location.href = btn.url);
+    });
+  </script>
+
+</body>
+</html>
